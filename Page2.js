@@ -7,11 +7,11 @@ let hadithContainer = document.querySelector('.hadithContainer'),
 HadithChanger();
 function  HadithChanger()
 {
-    fetch("https://api.hadith.sutanlab.id/books/muslim?range=1-300")
+    fetch("https://hadis-api-id.vercel.app/hadith/abu-dawud?page=1&limit=300")
     .then(response => response.json())
     .then(data =>{
 
-        let Hadiths = data.data.hadiths;
+        let Hadiths = data.items;
         changeHadith();
         next.addEventListener('click',()=>{
             hadithIndex == 299 ? hadithIndex = 0 : hadithIndex++;
