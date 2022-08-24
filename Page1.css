@@ -71,15 +71,12 @@ ul{
 
 
 .navbar-brand{
-margin-right: 70px;
-margin-top: 7px;
-font-size: 60px ;
-color: green;
+   margin-right: 70px;
+   margin-top: 7px;
+   font-size: 60px ;
+   color: green;
 }
 
-.text-center{
-    animation: control-width 3s;
-}
 .h5{
     color:rgb(232, 234, 236);
     font-size: 25px; 
@@ -169,11 +166,15 @@ span{
     justify-content: center;
 }
 .footer .social .a3:hover{
-    color: rgb(10, 44, 13);
+    color: rgb(7, 89, 160);
     justify-content: center;
 }
 .footer .social .a4:hover{
-    color: rgb(39, 152, 187);
+    color: rgb(45, 45, 45);
+    justify-content: center;
+}
+.footer .social .a5:hover{
+    color: rgb(68, 225, 154);
     justify-content: center;
 }
 
