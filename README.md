@@ -1,5 +1,7 @@
 # Qurank Kareem
 
+<img align="center" width="80%" src="https://github.com/Mohamed20a/My-Portfolio/blob/main/assets/img/portfolio/quran.png">
+
 ## What is Qurank Kareem?
  Programming Ongoing charity for all dead Muslims.
  The site is about the Noble Qur’an, interpretation of the Qur’an, hadiths, morning and evening remembrances, and praises.
