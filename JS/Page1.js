@@ -1,4 +1,3 @@
-
 let menu = document.querySelector('.navbar-toggler');
 let navbar = document.querySelector('.navbar .collapse');
 let header = document.querySelector('.navbar');
@@ -44,18 +43,65 @@ remove('active');
 
 
 let exploreBtn = document.querySelector('.title .btn'),
-    BoxSection = document.querySelector('.box');
+    praySection = document.querySelector('.pray');
 exploreBtn.addEventListener('click',()=>{
-    BoxSection.scrollIntoView({
+    praySection.scrollIntoView({
         behavior : "smooth"
     })
-})  
+})   
 
 
-let exploreBtn2 = document.querySelector('.btn2 .fas'),
-    HeaderSection = document.querySelector('.header');
-exploreBtn2.addEventListener('click',()=>{
-    HeaderSection.scrollIntoView({
-        behavior : "smooth"
+
+
+
+let cards = document.querySelector('.cards');
+getPrayTime();
+function getPrayTime()
+{
+
+
+    fetch("https://api.aladhan.com/v1/timingsByCity?city=cairo&country=egypt&method=8")
+    .then(response => response.json())
+    .then(data => {
+        
+        let times = data.data.timings;
+        
+        const prayersTimes = {
+            الفجر: times.Imsak,
+            الشروق: times.Sunrise,
+            الظهر: times.Dhuhr,
+            العصر: times.Asr,
+            المغرب: times.Sunset,
+            العشاء: times.Isha,
+        };
+
+        
+
+        
+        cards.innerHTML = '';
+        
+            for (let time in prayersTimes)
+            {
+                
+                
+                cards.innerHTML+= 
+                
+                
+                `
+                    <div class="card">
+                        <div class="circle">
+                            <svg>
+                                <Circle cx="100" cy="100" r="100"></Circle>
+                            </svg>
+                            <div class="prayTime">${prayersTimes[time]}</div>
+                        </div>
+                        <p>${time}</p>
+                        
+                    </div>
+                `
+                }
+            
+        
     })
-}) 
+    
+}  
