@@ -1,6 +1,6 @@
 # Qurank Kareem
 
-<img align="center" width="80%" src="https://github.com/Mohamed20a/My-Portfolio/blob/main/assets/img/portfolio/quran.png">
+<img align="center" width="80%" src="https://github.com/Mohamed20a/My-Portfolio/blob/main/assets/img/portfolio/qurann.png">
 
 ## What is Qurank Kareem?
  Programming Ongoing charity for all dead Muslims.
