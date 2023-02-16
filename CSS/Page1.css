@@ -11,6 +11,10 @@
     background-size: cover;
     background-position: center;
 }
+/* .navbar{
+    background: rgb(0 0 0);
+    padding: 0;
+} */
 .nav{
     position: fixed;
     top: 0;
@@ -118,7 +122,7 @@ ul{
     color: white;
     font-size: 30px;
 }
-.btn{
+.btn1{
     background-color: transparent;
     color: white;
     margin-top: 12px;
@@ -133,11 +137,11 @@ ul{
     font-size: 20px;
 
 }
-.btn:hover{
+.btn1:hover{
     color: black;
     background-color: white;
 } 
-span{
+.span{
     color: green;
     font-size: 50px;
 }
@@ -222,46 +226,96 @@ span{
 
 
 
+/* Footer */
 .footer{
-    padding: 0;
-    background: rgb(255, 255, 255);
-    
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: green;
+    color: #fff;
+    margin-top: 10em;
 }
-.footer svg{
-    fill: #247429;
-    transform: translateY(10px);
-}
-.footer .social{
-    display: flex;
+.btn-social{
+    border-radius: 0px 20px 0 20px;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    background-color: #247429;
 }
-.footer .social a{
-    margin: 15px;
-    font-size: 35px;
-    color: white;
-    transition: .5s all ease-in-out;
+
+#face:hover{
+    color: #fff;
+    background: #425aa1;
+    transition: .3s all;
 }
-.footer .social .a1:hover{
-    color: rgb(9, 64, 148);
-    justify-content: center;
+#porto:hover{
+    color: #fff;
+    background: #008763;
+    transition: .3s all;
 }
-.footer .social .a2:hover{
-    color: rgb(171, 49, 175);
-    justify-content: center;
+#insta:hover{
+    color: #fff;
+    background: rgb(224, 39, 76);
+    transition: .3s all;
 }
-.footer .social .a3:hover{
-    color: rgb(7, 89, 160);
-    justify-content: center;
+#linked:hover{
+    color: #fff;
+    background: #0091a0;
+    transition: .3s all;
 }
-.footer .social .a4:hover{
-    color: rgb(45, 45, 45);
-    justify-content: center;
+#github:hover{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.638);
+    transition: .3s all;
 }
-.footer .social .a5:hover{
-    color: rgb(68, 225, 154);
-    justify-content: center;
+.copyright { 
+    background-color: rgb(2, 99, 2);
+    font-family: 'rabar';
+}
+.lead{
+    font-family: sans-serif;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    background-size: 400%;
+    color: rgb(6, 146, 39);
+    margin-top: 1em;
+    border: 1px #fff solid;
+}
+.button:hover {
+    color: #fff;
+}
+.button:hover::before {
+    transform: scaleX(1);
+}
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    color: #fff;
+    background: linear-gradient(
+        82.3deg,
+        rgb(2, 168, 46) 10.8%,
+        rgb(3, 117, 28) 94.3%
+    );
+    transition: all 0.475s;
 }
 
 
