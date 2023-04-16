@@ -1,0 +1,115 @@
+
+.navbar-collapse{
+    margin-left:  15px;
+}
+.navbar-brand{
+    color: rgb(30, 210, 195);
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar-brand:hover{
+    color: white;
+    transition: .4s ease;
+}
+.nav-item{
+    font-size: 20px;
+    font-family:sans-serif;
+    padding: 4px;
+    color: black;
+}
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    user-select: none;
+    pointer-events: none; 
+}
+#navbarSupportedContent ul li{
+    position: relative;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    pointer-events: all;
+}
+#navbarSupportedContent a::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    left: 50%;
+    bottom: -8px;
+    border-radius: 5px;
+}
+#navbarSupportedContent li:hover a::before{
+    width: 100%;
+    left: 0;
+    transition: .2s all ease-in-out;
+}
+
+
+
+section h3{
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    left: 50%;
+    margin-top: 30px;
+    
+}
+
+.hadithContainer{
+    min-height: 350px;
+    position: relative;
+    box-shadow: 4px 4px 4px 0 inset rgb(179, 175, 175),
+                -4px -4px 4px 0px inset rgb(179, 175, 175);
+    color: rgb(27, 23, 19);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center; 
+    padding: 50px 20px;
+    margin-top: 45px;   
+    cursor: pointer;        
+}
+.hadith .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hadith .buttons div{
+    border: 2px rgb(48, 172, 43) solid;
+    color: rgb(54, 160, 63);
+    margin-top: 12px;
+    border-radius: 10px;
+    transition: .5s all ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14) , 0 7px 10px -5px rgba(76,175,88,.4) ;
+}
+.hadith .buttons .prev:hover{
+    color: white;
+    background-color: rgb(48, 172, 43);
+}
+.hadith .buttons .next:hover{
+    color: white;
+    background-color: rgb(48, 172, 43);
+}
+.btn2{
+    direction: rtl;
+}
+.hadith .buttons .number{
+    color: green;
+    background-color: transparent;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(76,175,88,.4) ;
+    border:  1px rgb(139, 241, 108) solid;
+    border-radius: 9px;
+}
+
+
+@media (max-width : 1024px) {
+    .lecture-container .right, .lecture-container .left {
+        width: 98%;
+    }
+}
