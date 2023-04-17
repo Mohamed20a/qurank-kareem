@@ -15,11 +15,11 @@ const cards = document.querySelector('.cards');
     
         // Calculating time according to the 12-hour system
         const prayersTimes = {
-            الفجر: new Date(`01/01/2000 ${times.Imsak}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
+            الفجر: new Date(`01/01/2000 ${times.Fajr}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             الشروق: new Date(`01/01/2000 ${times.Sunrise}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             الظهر: new Date(`01/01/2000 ${times.Dhuhr}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             العصر: new Date(`01/01/2000 ${times.Asr}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
-            المغرب: new Date(`01/01/2000 ${times.Sunset}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
+            المغرب: new Date(`01/01/2000 ${times.Maghrib}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             العشاء: new Date(`01/01/2000 ${times.Isha}`).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
         };
     
