@@ -1,48 +1,6 @@
 // Select Items
-const menu = document.querySelector('.navbar-toggler');
-const navbar = document.querySelector('.navbar .collapse');
-const header = document.querySelector('.navbar');
-const fixedNav = document.querySelector(".navbar");
-const scrollBtn = document.querySelector(".scrollBtn");
-const exploreBtn = document.querySelector('.title .btn1');
-const praySection = document.querySelector('.pray');
 const cards = document.querySelector('.cards');
 
-// Add click event on menu button
-menu.onclick = () =>{
-menu.classList.toggle('fa-times');
-navbar.classList.toggle('active');
-}
-
-// Add scroll event
-window.onscroll = () =>{
-menu.classList.remove('fa-times');
-navbar.classList.remove('active');
-
-if(window.scrollY > 0){
-    header.classList.add('active');
-}else{
-    header.classList.remove('active');
-}
-
-scrollup();
-}
-
-// Add click event for scroll up button
-scrollBtn.addEventListener('click',()=>{
-    window.scrollTo({
-    top : 0 ,
-    behavior : "smooth"
-    })
-    })
-    
-    // Add click event on explore button
-    exploreBtn.addEventListener('click',()=>{
-    praySection.scrollIntoView({
-    behavior : "smooth"
-    })
-    })
-    
     // Call the prayer function
     getPrayTime();
     
@@ -83,3 +41,48 @@ scrollBtn.addEventListener('click',()=>{
         }
     })
 }    
+
+
+let menu = document.querySelector('.navbar-toggler');
+let navbar = document.querySelector('.navbar .collapse');
+let header = document.querySelector('.navbar');
+
+// Add click event on menu button
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+
+// Add scroll event
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+if(window.scrollY > 0){
+    header.classList.add('active');
+}else{
+    header.classList.remove('active');
+}
+
+}
+
+
+// Add click event for scroll up button
+let fixedNav = document.querySelector(".navbar"),
+scrollBtn = document.querySelector(".scrollBtn");
+window.addEventListener("scroll", ()=>{
+scrollup()
+})
+scrollBtn.addEventListener('click',()=>{
+window.scrollTo({
+top : 0 ,
+behavior : "smooth"
+})
+})
+scrollup()
+function scrollup(){
+window.scrollY > 50 ? fixedNav.classList.add('active') : fixedNav.classList.
+remove('active');
+window.scrollY > 100 ? scrollBtn.classList.add('active') : scrollBtn.classList.
+remove('active'); 
+}
