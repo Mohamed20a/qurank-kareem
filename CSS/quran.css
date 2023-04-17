@@ -1,3 +1,4 @@
+/* Quran Section */
 section h3{
     font-size: 32px;
     color: green;
@@ -6,7 +7,6 @@ section h3{
     margin-top: 30px;
     font-family: 'katibeh';
 }
-
 .surahContainer{
     display:flex;
     justify-content:space-around;
@@ -35,8 +35,7 @@ section h3{
     color: #fff;
     transition: .5s;
 }
-
-
+/* Surah Section */
 .surah-popup{
     direction: rtl;
     position: fixed;
@@ -92,7 +91,7 @@ section h3{
     
 }
 
-
+/* Scroll Btn */
 .scrollBtn{
     direction: rtl;
     position: fixed;

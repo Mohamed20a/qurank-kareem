@@ -1,3 +1,4 @@
+/* Hadith Section */
 section h3{
     font-size: 30px;
     color: green;
@@ -6,7 +7,6 @@ section h3{
     margin-top: 30px;
     
 }
-
 .hadithContainer{
     min-height: 350px;
     position: relative;

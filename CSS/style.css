@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-
+/* Header */
 .header{
     background:linear-gradient(to top, rgb(0,0,0,0.5)70%, rgb(0,0,0,0.5)30%),url(/photo/background.jpg);
     box-sizing: border-box;
@@ -39,7 +39,6 @@
     color: white;
     transition: .4s ease;
 }
-
 .container-fluid .bars {
     display: none;
 }
@@ -53,14 +52,13 @@
     font-size: 60px !important;
     color: green;
 }
-
+/* Title */
 .h5{
     color:rgb(232, 234, 236);
     font-size: 25px; 
     font-family: 'rsail-bold'; 
     padding-top: 10px;
 }
-
 .title{
     margin-top: 190px;
     margin-right: 50PX;
@@ -95,8 +93,7 @@
     color: green;
     font-size: 50px;
 }
-
-
+/* Pray for Section */
 .box{
     min-height: 350px;
     position: relative;
@@ -112,7 +109,7 @@
     color: rgb(11, 71, 11); 
     border-bottom: 10px #00000075 solid;         
 }
-
+/* Pray Section */
 .name{
     text-align: center;
     color: #247429;
@@ -174,7 +171,6 @@
     font-weight: bold;
     font-family: cursive;
 }
-
 /* Footer */
 .footer{
     padding-top: 3rem;
@@ -192,7 +188,7 @@
     justify-content: center;
     align-items: center;
 }
-
+/* Sociol Btn */
 #face:hover{
     color: #fff;
     background: #425aa1;
@@ -225,7 +221,6 @@
 .lead{
     font-family: sans-serif;
 }
-
 .button {
     position: relative;
     overflow: hidden;
@@ -266,8 +261,7 @@
     );
     transition: all 0.475s;
 }
-
-
+/* Scroll Btn */
 .scrollBtn{
     direction: rtl;
     position: fixed;
@@ -308,7 +302,6 @@
     max-width: 740px;
     }
 }
-
 
 @media (min-width: 1000px){ 
     .container {
