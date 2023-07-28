@@ -1,5 +1,3 @@
-
-
 let SurahsContainer = document.querySelector('.surahContainer');
 getSurahs()
 function getSurahs()
@@ -22,31 +20,49 @@ function getSurahs()
 
         }
         let SurahsTitels = document.querySelectorAll('.surah');
-        let popup = document.querySelector('.surah-popup'),
-            AyatContainer = document.querySelector('.ayat');
-        SurahsTitels.forEach((title,index)=>{
-            title.addEventListener('click',()=>{
+        let popup = document.querySelector('.surah-popup');
+        let AyatContainer = document.querySelector('.ayat');
+        let displayedSurah = null;
+
+        SurahsTitels.forEach((title, index) => {
+            title.addEventListener('click', () => {
                 title.scrollTo({
-                    behavior : "smooth"
-                })
-            fetch(`https://api.alquran.cloud/v1/surah/${index + 1}`)
-                .then(response => response.json())
-                .then(data=>{
-                    AyatContainer.innerHTML = "";
-                    let Ayat = data.data.ayahs;
-                    Ayat.forEach(aya=>{
-                        popup.classList.add('active');
-                        AyatContainer.innerHTML += `  
-                        <div>
-                            <span style="font-size:20px;color:#247429; "> { ${aya.numberInSurah} }  -</span>
-                            <span style="font-size:20px; margin:8px;">${aya.text} .</span>
-                        </div> 
-                        <br>
-                        `
-                    })  
-                })
-            })
-        })  
+                    behavior: 'smooth',
+                });
+            
+                if (displayedSurah !== title) {
+                    fetch(`https://api.alquran.cloud/v1/surah/${index + 1}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        AyatContainer.innerHTML = '';
+                        let Ayat = data.data.ayahs;
+                        let AyatName = data.data;
+
+                        // عرض اسم السورة قبل عرض الآيات
+                        AyatContainer.innerHTML += `
+                            <div class="ayat-name">
+                                <h1 class="surahName">${AyatName.name}</h1> 
+                                <h1 class="surahNum"> عدد الأيات : <span class="surah-num">( ${AyatName.numberOfAyahs} )</span></h1> 
+                            </div>
+                            <br>
+                        `;
+            
+                        Ayat.forEach(aya => {
+                            popup.classList.add('active');
+                            AyatContainer.innerHTML += `
+                                <div id="ayats">
+                                    <span style="font-size:20px;color:#247429;font-family: quran; "> ﴿ ${aya.numberInSurah} ﴾</span>
+                                    <span style="font-size:24px; margin:8px;font-family: quran;">${aya.text} .</span>
+                                </div> 
+                                <br>
+                            `;
+                        });
+                    });
+            
+                    displayedSurah = title;
+                }
+            });
+        });  
         let closePopup = document.querySelector('.close-popup');
         closePopup.addEventListener('click',()=>{
             popup.classList.remove('active');
