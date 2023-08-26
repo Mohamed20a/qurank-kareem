@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta
+          name="description"
+          content="Programming Ongoing charity for all dead Muslims.
+                  The site is about the Noble Qur’an,
+                  interpretation of the Qur’an, hadiths,
+                  morning and evening remembrances, and praises.">
       <!--    Css   -->
     <link rel="stylesheet" href="CSS/bootstrap.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=katibeh,hala" />
+    <link rel="stylesheet" href="CSS/navPage.css">
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=katibeh,arabswell-1" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!--  Font  -->
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=thuluth-decorated" />
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=lemonada" />
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=rsail-bold" />
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=rsail-bold" />
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=thuluth-decorated,lemonada,rsail-bold" />
     <!--   Font Awesome  -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Favicon-->
@@ -25,8 +29,18 @@
 <body>
   <section class="header">
     <nav class="navbar navbar-expand-lg navbar-dark active" id="nav" >
-      <div class="container-fluid">
-          <div class="collapse navbar-collapse active" id="navbarSupportedContent"  >
+      <div class="container-fluid" style="flex-direction: row-reverse;">
+        <a class="navbar-brand" href="#">♡ قرآنك </a>
+        <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <label class="hamburger">
+              <input type="checkbox">
+              <svg viewBox="0 0 32 32">
+                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="line" d="M7 16 27 16"></path>
+              </svg>
+          </label>
+        </button>
+          <div class="collapse navbar-collapse active" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-3 mb-lg-0 " >
               <li class="nav-item " >
                 <a class="nav-link " href="./page/azkar.html" >أذكار وتسابيح</a>
@@ -45,14 +59,10 @@
               </li>
             </ul>
           </div>
-          <a class="navbar-brand" href="#" style="color: green; font-family: 'thuluth-decorated';  "> <span style="color: #247429; font-size: 65px;">♡</span> قرآنك </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="font-size: 22px; transition: .1s all ease-in-out; "></span>
-          </button>
       </div>
     </nav>
       <div class="text-center m-5">
-        <h2 id="h2" class="text" style="color: green; font-size: 55px; font-family: 'thuluth-decorated';" data-aos="fade-top">  قرآنك </h2><br>
+        <h2 id="h2" class="text" data-aos="fade-top">  قرآنك </h2><br>
         <h5 class="h5 " data-aos="fade-right"> صدقة جارية لجميع أموات المسلمين </h5>
       </div>
       <div class="title" >
@@ -60,7 +70,7 @@
           مرحبا بك في
         </h1>
         <h1 class="h1" style="padding: 8px;">
-          موقع <span class="span" style="font-family: 'thuluth-decorated';font-size: 50px; ">قرآنك</span> الأسلامي
+          موقع <span class="span">قرآنك</span> الأسلامي
         </h1>
         <button class="btn1"> مواقيت الصلاة
             <!-- <i class="fas fa-angle-left" aria-hidden="true" style="color: #247429;font-size: 20px; margin: 2px;"></i> -->
@@ -70,6 +80,7 @@
   </section>
   
 
+  <!-- Pray for Section -->
   <section class="box">
     <div>
     <h1 style="font-family: 'rsail-bold'; font-size: 35px; margin-bottom: 1em;"> "هذا الموقع تم تصميمة ليكون صدقة جارية لجميع أموات المسلمين" </h1>
@@ -90,8 +101,7 @@
     </div>
   </section>
 
-  
-
+  <!-- Pray Section -->
   <section class="pray">
     <div class="container">
       <h3 class="name"> <span style="font-size: 40px;">{</span>  مواقيت الصلاة <span style="font-size: 40px;">}</span></h3>
@@ -111,22 +121,21 @@
   </section>
 
   
-
   <footer class="footer text-center" >
     <div class="container">
         <div class="row">
             <!-- Footer Location-->
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4"><span style=" font-family: 'hala'; font-size: 25px; color: #fff;">ما لا يسع أطفال المسلمين جهله</span></h4>
+                <h4 class="text-uppercase mb-4"><span style=" font-family: 'arabswell-1'; font-size: 25px; color: #fff;">Quran Mail</span></h4>
                 <p class="lead mb-0">                 
-                  ,مشروع يحوي منهجًا يسيرًا سهلًا لمسائل لا يسع المسلم جهلها
-                  <br>يشمل مسائل العقيدة والفقه والسيرة والآداب والتفسير والحديث والأخلاق والأذكار
+                  خدمة إرسال الآيات القرآنية مع تفسيرها يومياً الساعة 12 صباحاً ,
+                  لتكون بداية مميزة ليومك عبر البريد الإلكتروني.
                     <br> 
-                    <a href="https://el-islam.netlify.app" target="_blank" style="color: black; text-align: center;text-decoration: none;">
+                    <a href="https://quran-mail.000webhostapp.com/" target="_blank" style="color: black; text-align: center;text-decoration: none;">
                       <button  class="button">
                           <span class="button-content">
-                            <span class="btn-name">Islamic</span>&nbsp;
-                            <i class="fa-solid fa-book-quran"></i>
+                            <span class="btn-name">Site</span>&nbsp;
+                            <i class="fa-regular fa-paper-plane"></i>
                           </span>
                       </button>
                   </a> 
@@ -136,11 +145,11 @@
             <div class="col-lg-6 mb-6 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Around the Web</h4>
                 <div class="line"></div>
-                <a class="btn btn-outline-light btn-social mx-1"  id="face" href="https://www.facebook.com/profile.php?id=100006434713527" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" id="insta" href="https://www.instagram.com/m_ahmeeeed/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" id="porto" href="https://portfolioo-1.netlify.app" target="_blank"><i class="fa-solid fa-user"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" id="linked" href="https://www.linkedin.com/in/mohamed-ahmed-elgeady-bb358b239/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" id="github" href="https://github.com/Mohamed20a" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" aria-label="Facebook" id="face" href="https://www.facebook.com/profile.php?id=100006434713527" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" aria-label="Instagram" id="insta" href="https://www.instagram.com/m_ahmeeeed/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" aria-label="Portofilo" id="porto" href="https://mohammed-ahmed.netlify.app" target="_blank"><i class="fa-solid fa-user"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" aria-label="LinkedIn" id="linked" href="https://www.linkedin.com/in/mohamed-ahmed-elgeady-bb358b239/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" aria-label="Github" id="github" href="https://github.com/Mohamed20a" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <div class="line"></div>
             </div>
         </div>
@@ -151,7 +160,7 @@
     <div class="container"> Mohamed Ahmed Elgeady ❤️</div>
 </div>
 
-
+<!-- Scroll Section -->
 <div class="scrollBtn active" href="#" >
   <i class="fas fa-angle-double-up" aria-hidden="true"></i>
 </div>
