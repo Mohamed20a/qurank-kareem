@@ -1,3 +1,35 @@
+.navbar-brand{
+    font-family: 'thuluth-decorated' !important;
+}
+/* Navbar Toggler */
+.hamburger {
+    cursor: pointer;
+}
+.hamburger input {
+    display: none;
+}
+.hamburger svg {
+    height: 2.2em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+.hamburger input:checked + svg {
+    transform: rotate(-45deg);
+}
+.hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
 /* Quran Section */
 section h3{
     font-size: 32px;
@@ -7,11 +39,20 @@ section h3{
     margin-top: 30px;
     font-family: 'katibeh';
 }
+.ayat-name {
+    /* position: sticky;
+    top: 0; */
+    background-color: #fff;
+}
+audio {
+    margin-bottom: 1em;
+}
 .surahContainer{
     display:flex;
     justify-content:space-around;
     flex-wrap: wrap;
     direction: rtl;
+    margin-bottom: 3em;
 }
 .surahContainer .surah{
     min-height: 140px;
@@ -28,6 +69,7 @@ section h3{
     color: #232323;
     font-size: 17px;
     margin-top: 45px;
+    border-radius: 1em 0 1em 0;
 }
 .surahContainer .surah:hover{
     transform: scale(1.05);
@@ -36,6 +78,20 @@ section h3{
     transition: .5s;
 }
 /* Surah Section */
+.surah-num{
+    color: green;
+}
+.surahNum{
+    font-size: 1.3em;
+    margin: -1.1em 0 1.2em 0;
+    font-family: 'katibeh';
+}
+.surahName{
+    font-size: 1.8em;
+    color: green;
+    margin-bottom: 1.2em;
+    padding-top: 1em;
+}
 .surah-popup{
     direction: rtl;
     position: fixed;
@@ -49,9 +105,22 @@ section h3{
     transform: translateX(100%);
     
 }
-.surah-popup.active{
+.all{
+    text-align: justify;
+    font-size: 27px;
+}
+#ayats{
+    margin: 0px 0px;
+    display: inline;
+    line-height: 54px;
+    font-weight: 500;
+    color: #20376a;
+    transition: .3s ease-in-out;
+}
+.surah-popup.active {
     transform: translateX(0);
-    transition: .7 all ease-in-out;
+    transition: .7s all ease-in-out;
+    overflow: auto;
 }
 .surah-popup::-webkit-scrollbar{
     width: 10px;
@@ -64,8 +133,8 @@ section h3{
 }
 .close-popup{
     position: sticky;
-    top: 8px;
-    right: 5px;
+    top: 30px;
+    right: 20px;
     width: 40px;
     box-shadow: 0 0 4px rgba(0, 0, 0, .6);
     display: flex;
@@ -76,15 +145,20 @@ section h3{
     cursor: pointer;
     background: #247429;
     border-radius: 25%;
+    z-index: 1;
+}
+#close-tafser{
+    right: 5px !important;
 }
 .surah-popup .ayat{
     padding: 20px;
     width: calc(100% - 40px);
     margin-top: 20px;
-    margin-right: 40px;
+    margin-right: 20px;
     color: #121212;
     text-align: center;
 }
+
 .surah-popup .ayat p{
     line-height: 2;
     width: 100%;
@@ -115,8 +189,43 @@ section h3{
 }
 
 
+
+
+
+
+
 @media (max-width : 1024px) {
     .lecture-container .right, .lecture-container .left {
         width: 98%;
     }
+}
+
+@media (max-width: 991.5px) {
+    .navbar-nav{
+        display: flex;
+    flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 700px){
+    .close-popup {
+        right: 0 !important;
+    }
+    .all {
+        margin-right: 10px;
+    }
+}
+    
+
+@media (max-width: 576px){
+#ayats{
+    line-height: 45px;
+}
+.label {
+    font-size: 22px !important;
+}
+
+.aya-text {
+    font-size: 24px;
+}
 }
